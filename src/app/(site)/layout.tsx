@@ -1,4 +1,6 @@
 import Navigation from "@/components/site/navigation";
+import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
 import React from "react";
 
 type Props = {
@@ -7,10 +9,12 @@ type Props = {
 
 const SiteLayout = ({ children }: Props) => {
   return (
-    <div>
-      <Navigation />
-      {children}
-    </div>
+    <ClerkProvider appearance={{ baseTheme: dark }}>
+      <main>
+        <Navigation />
+        {children}
+      </main>
+    </ClerkProvider>
   );
 };
 

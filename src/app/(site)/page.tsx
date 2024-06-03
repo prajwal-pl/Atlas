@@ -74,10 +74,7 @@ const Home = () => {
                   ))}
                 </div>
                 <Link
-                  className={clsx(
-                    "w-full text-center bg-primary p-2 rounded-md ",
-                    { "bg-muted-foreground": card.title === "Unlimited Saas" }
-                  )}
+                  className="w-full text-center text-white bg-primary p-2 rounded-md"
                   href={`/agency?plan=${card.priceId}`}
                 >
                   Get Started
